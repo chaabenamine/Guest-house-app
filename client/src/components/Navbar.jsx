@@ -13,8 +13,8 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Guest House', path: '/rooms' },
-        { name: 'Experience', path: '/' },
-        { name: 'About', path: '/' },
+        { name: 'Experience', path: '/experience' },
+        { name: 'About Us', path: '/about-us' },
     ];
 
 
@@ -50,7 +50,7 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <Link to="/">
-               <img src={assets.logo} alt="logo" className={`h-9 ${isScrolled && "invert opacity-80"}`}/>
+               <img src={assets.logo} alt="logo" className={`h-14 ${isScrolled && "invert opacity-80"}`}/>
                 </Link>
 
                 {/* Desktop Nav */}

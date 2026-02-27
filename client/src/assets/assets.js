@@ -1,4 +1,4 @@
-import logo from './logo.svg'
+import logo from './logo.png'
 import searchIcon from './searchIcon.svg'
 import userIcon from './userIcon.svg'
 import calenderIcon from './calenderIcon.svg'
@@ -27,16 +27,22 @@ import roomImg1 from './roomImg1.png'
 import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
-import regImage from './regImage.png'
-import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
-import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
-import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
+import regImage from './regImage.jpg'
+import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.jpg";
+import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.jpg";
+import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.jpg";
 import addIcon from "./addIcon.svg";
 import dashboardIcon from "./dashboardIcon.svg";
 import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
+import airIcon from "./airIcon.svg";
+import seaIcon from "./seaIcon.svg";
+import desk from "./desk.png";
+import kitchen from "./kitchen.png"
+import Bedrooms2 from "./2 Bedrooms.svg"
+import Balcony from "./Balcony.svg"
 
 
 export const assets = {
@@ -72,22 +78,54 @@ export const assets = {
     uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
+    airIcon,
+    seaIcon,
+    desk,
+    kitchen,
+    Bedrooms2,
+    Balcony,
 }
 
 export const cities = [
-    "Marsa",
-    "Sidi bou said",
-    "Sidi dhrif",
-    "Tunis"
+    "Kef",
+    "Beja",
+    "Tozeur",
+    "Kébili",
+    "Bizerte ",
+    "Sousse",
+    "Kairouan",
+    "Monastir "
     
 ];
 
-// Exclusive Offers Dummy Data
 export const exclusiveOffers = [
-    { _id: 1, title: "Summer Escape Package", description: "Enjoy a complimentary night and daily breakfast", priceOff: 25, expiryDate: "Aug 31", image: exclusiveOfferCardImg1 },
-    { _id: 2, title: "Romantic Getaway", description: "Special couples package including spa treatment", priceOff: 20, expiryDate: "Sep 20", image: exclusiveOfferCardImg2 },
-    { _id: 3, title: "Luxury Retreat", description: "Book 60 days in advance and save on your stay at any of our luxury properties worldwide.", priceOff: 30, expiryDate: "Sep 25", image: exclusiveOfferCardImg3 },
-]
+    { 
+        _id: 1, 
+        title: "Cozy Kef Stay", 
+        description: "Relax in a comfortable room at Maison Caméléon Kef with a complimentary local breakfast", 
+        priceOff: 20, 
+        expiryDate: "Aug 31", 
+        image: exclusiveOfferCardImg1 
+    },
+    { 
+        _id: 2, 
+        title: "Romantic Terrace Experience", 
+        description: "Special couples package with terrace sunset views and a welcome drink at the guesthouse", 
+        priceOff: 15, 
+        expiryDate: "Sep 20", 
+        image: exclusiveOfferCardImg2 
+    },
+    { 
+        _id: 3, 
+        title: "Early Bird Maison Caméléon", 
+        description: "Book 30 days in advance and enjoy a discount on your stay in our cozy guesthouse rooms", 
+        priceOff: 25, 
+        expiryDate: "Sep 25", 
+        image: exclusiveOfferCardImg3 
+    }
+];
+    
+
 
 // Testimonials Dummy Data
 export const testimonials = [
@@ -99,10 +137,16 @@ export const testimonials = [
 // Facility Icon
 export const facilityIcons = {
     "Free WiFi": assets.freeWifiIcon,
-    "Free Breakfast": assets.freeBreakfastIcon,
+    "Breakfast Included": assets.freeBreakfastIcon,
     "Room Service": assets.roomServiceIcon,
     "Mountain View": assets.mountainIcon,
     "Pool Access": assets.poolIcon,
+    "Air Conditioning": assets.airIcon,
+    "Sea View":assets.seaIcon,
+    "desk":assets.desk,
+    "kitchen":assets.kitchen,
+    "2 Bedrooms":assets.Bedrooms2,
+    "Balcony":assets.Balcony,
 };
 
 // For Room Details Page
@@ -116,9 +160,9 @@ export const roomCommonData = [
 // User Dummy Data
 export const userDummyData = {
     "_id": "user_2unqyL4diJFP1E3pIBnasc7w8hP",
-    "username": "Great Stack",
-    "email": "user.greatstack@gmail.com",
-    "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzJ2N2c5YVpSSEFVYVUxbmVYZ2JkSVVuWnFzWSJ9",
+    "username": "Maison Caméléon",
+    "email": "user.maisoncaméléon@gmail.com",
+    "image": "/logo.png",
     "role": "houseOwner",
     "createdAt": "2025-03-25T09:29:16.367Z",
     "updatedAt": "2025-04-10T06:34:48.719Z",
@@ -128,84 +172,92 @@ export const userDummyData = {
     ]
 }
 
-export const houseDummyData = {
-    "_id": "67f76393197ac559e4089b72",
-    "name": "Azure Coast Guest House",
-    "address": "12 Rue des Jasmins, 2026 Sidi Bou Said, TN",
-    "contact": "+216 55 123 456",
-    "owner": userDummyData,
-    "city": "Sidi Bou Said, La Marsa, Sidi Dhrif, Tunis",
-    "createdAt": "2025-04-10T06:22:11.663Z",
-    "updatedAt": "2025-04-10T06:22:11.663Z",
-    "__v": 0
-}
 
+export const houseDummyData = [
+  {
+    _id: "67f76393197ac559e4089b72",
+    name: "North-West Mountain Escape",
+    address: "Rue Habib Bourguiba, Le Kef, Tunisia",
+    contact: "+216 55 123 456",
+    owner: userDummyData,
+    city: "Kef",
+    createdAt: "2025-04-10T06:22:11.663Z",
+    updatedAt: "2025-04-10T06:22:11.663Z",
+    __v: 0
+  },
+  {
+    _id: "67f76393197ac559e4089b73",
+    name: "Saharan Desert Experience",
+    address: "Avenue Hédi Chaker, Tozeur, Tunisia",
+    contact: "+216 55 123 456",
+    owner: userDummyData,
+    city: "Tozeur",
+    createdAt: "2025-04-10T06:22:11.663Z",
+    updatedAt: "2025-04-10T06:22:11.663Z",
+    __v: 0
+  },
+  {
+    _id: "67f76393197ac559e4089b74",
+    name: "Spiritual & Heritage Center",
+    address: "Rue Ibn El Jazzar, Kairouan, Tunisia",
+    contact: "+216 55 654 321",
+    owner: userDummyData,
+    city: "Kairouan",
+    createdAt: "2025-04-10T06:25:11.663Z",
+    updatedAt: "2025-04-10T06:25:11.663Z",
+    __v: 0
+  },
+  {
+    _id: "67f76393197ac559e4089b75",
+    name: "Mediterranean Coastal Lifestyle",
+    address: "Boulevard du 14 Janvier, Sousse, Tunisia",
+    contact: "+216 55 987 654",
+    owner: userDummyData,
+    city: "Sousse",
+    createdAt: "2025-04-10T06:28:11.663Z",
+    updatedAt: "2025-04-10T06:28:11.663Z",
+    __v: 0
+  }
+]
 
-// Rooms Dummy Data
+// Corrected Rooms Data
 export const roomsDummyData = [
-    {
-        "_id": "r1",
-        "house": houseDummyData,
-        "roomType": "Deluxe Double Room",
-        "pricePerNight": 420,
-        "amenities": ["Free WiFi", "Sea View", "Air Conditioning", "Breakfast Included"],
-        "images": [roomImg1, roomImg2, roomImg3, roomImg4],
-        "isAvailable": true
-    },
-    {
-        "_id": "r2",
-        "house": houseDummyData,
-        "roomType": "Standard Double Room",
-        "pricePerNight": 300,
-        "amenities": ["Free WiFi", "Mountain View", "Room Service"],
-        "images": [roomImg2, roomImg3, roomImg4, roomImg1],
-        "isAvailable": true
-    },
-    {
-        "_id": "r3",
-        "house": houseDummyData,
-        "roomType": "Single Room",
-        "pricePerNight": 220,
-        "amenities": ["Free WiFi", "Desk", "Air Conditioning"],
-        "images": [roomImg3, roomImg4, roomImg1, roomImg2],
-        "isAvailable": false
-    },
-    {
-        "_id": "r4",
-        "house": houseDummyData,
-        "roomType": "Family Suite",
-        "pricePerNight": 650,
-        "amenities": ["Free WiFi", "Sea View", "2 Bedrooms", "Kitchenette", "Balcony"],
-        "images": [roomImg4, roomImg1, roomImg2, roomImg3],
-        "isAvailable": true
-    },
-    {
-        "_id": "r5",
-        "house": houseDummyData,
-        "roomType": "Junior Suite",
-        "pricePerNight": 500,
-        "amenities": ["Free WiFi", "Private Terrace", "Jacuzzi", "Breakfast Included"],
-        "images": [roomImg1, roomImg3, roomImg2, roomImg4],
-        "isAvailable": true
-    },
-    {
-        "_id": "r6",
-        "house": houseDummyData,
-        "roomType": "Economy Room",
-        "pricePerNight": 180,
-        "amenities": ["Free WiFi", "Shared Balcony", "Air Conditioning"],
-        "images": [roomImg2, roomImg4, roomImg1, roomImg3],
-        "isAvailable": true
-    },
-    {
-        "_id": "r7",
-        "house": houseDummyData,
-        "roomType": "Premium Sea View Suite",
-        "pricePerNight": 780,
-        "amenities": ["Panoramic Sea View", "Private Pool", "King Bed", "Smart TV", "Breakfast Included"],
-        "images": [roomImg3, roomImg1, roomImg4, roomImg2],
-        "isAvailable": false
-    }
+  {
+    _id: "r1",
+    house: houseDummyData[0], // Nord-Ouest Montagnard
+    roomType: "Deluxe Double Room",
+    pricePerNight: 420,
+    amenities: ["Free WiFi", "Mountain View", "Air Conditioning", "Breakfast Included"],
+    images: [roomImg1, roomImg2, roomImg3, roomImg4],
+    isAvailable: true
+  },
+  {
+    _id: "r2",
+    house: houseDummyData[1], // Sud Saharien
+    roomType: "Standard Double Room",
+    pricePerNight: 300,
+    amenities: ["Free WiFi",  "Room Service","Air Conditioning", "Breakfast Included"],
+    images: [roomImg2, roomImg3, roomImg4, roomImg1],
+    isAvailable: true
+  },
+  {
+    _id: "r3",
+    house: houseDummyData[2], // Oasis Retreat
+    roomType: "Single Room",
+    pricePerNight: 220,
+    amenities: ["Free WiFi", "desk", "Air Conditioning"],
+    images: [roomImg3, roomImg4, roomImg1, roomImg2],
+    isAvailable: false
+  },
+  {
+    _id: "r4",
+    house: houseDummyData[3], // Sahara Sunset Villa
+    roomType: "Family Suite",
+    pricePerNight: 650,
+    amenities: ["Free WiFi", "Sea View", "2 Bedrooms", "kitchen", "Balcony"],
+    images: [roomImg4, roomImg1, roomImg2, roomImg3],
+    isAvailable: true
+  }
 ]
 
 
@@ -216,7 +268,7 @@ export const userBookingsDummyData = [
         "_id": "67f76839994a731e97d3b8ce",
         "user": userDummyData,
         "room": roomsDummyData[1],
-        "house": houseDummyData,
+        "house": houseDummyData[1],
         "checkInDate": "2025-04-30T00:00:00.000Z",
         "checkOutDate": "2025-05-01T00:00:00.000Z",
         "totalPrice": 299,
@@ -232,7 +284,7 @@ export const userBookingsDummyData = [
         "_id": "67f76829994a731e97d3b8c3",
         "user": userDummyData,
         "room": roomsDummyData[0],
-        "house": houseDummyData,
+        "house": houseDummyData[1],
         "checkInDate": "2025-04-27T00:00:00.000Z",
         "checkOutDate": "2025-04-28T00:00:00.000Z",
         "totalPrice": 399,
@@ -248,7 +300,7 @@ export const userBookingsDummyData = [
         "_id": "67f76810994a731e97d3b8b4",
         "user": userDummyData,
         "room": roomsDummyData[3],
-        "house": houseDummyData,
+        "house": houseDummyData[1],
         "checkInDate": "2025-04-11T00:00:00.000Z",
         "checkOutDate": "2025-04-12T00:00:00.000Z",
         "totalPrice": 199,
