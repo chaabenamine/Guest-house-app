@@ -4,7 +4,14 @@ import cors from "cors"
 import connectDB from "./configs/db.js";
 import { clerkMiddleware } from '@clerk/express'
 import clrekWebhooks from "./controllers/clerkWebhooks.js";
+import userRouter from "./routes/userRoutes.js";
+import houseRouter from "./routes/houseRoutes.js";
+import roomRouter from "./routes/houseRoutes.js";
+
+import connectCloudinary from "./configs/cloudinary.js";
+import bookingRouter from "./routes/bookingRoutes.js";
 connectDB()
+connectCloudinary();
 const app =express()
 app.use(cors())
 
@@ -16,5 +23,12 @@ app.use(clerkMiddleware())
 app.use("/api/clerk",clrekWebhooks);
 
 app.get('/',(req,res)=>res.send("API is working "))
+app.use('/api/user',userRouter)
+app.use('/api/houses',houseRouter)
+app.use('/api/rooms',roomRouter)
+app.use('/api/bookings',bookingRouter)
+
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=> console.log(`Server running on port ${PORT}`));
