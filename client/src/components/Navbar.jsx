@@ -1,7 +1,8 @@
 import React,{ useEffect, useState} from "react";
 import {assets} from "../assets/assets";
-import {Link, useLocation, useNavigate} from "react-router-dom";
-import { useClerk, useUser,UserButton } from "@clerk/clerk-react";
+import {Link, useLocation} from "react-router-dom";
+import { useClerk, UserButton } from "@clerk/clerk-react";
+import { useAppContext } from "../context/AppContext";
 
 const BookIcon = () => (<svg className="w-4 h-4 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4" />
@@ -22,9 +23,10 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const {openSignIn} = useClerk()
-    const {user} = useUser()
-    const navigate = useNavigate()
+    
     const location = useLocation()
+
+    const {user,navigate,isOwner,setShowHouseReg} = useAppContext()
 
 
  useEffect(() => {
@@ -61,9 +63,12 @@ const Navbar = () => {
                             <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                         </a>
                     ))}
-                    <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}onClick={()=>navigate('/owner')}>
-                        Dashboard
-                    </button>
+
+
+                    { user && (
+                        <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}onClick={()=>isOwner ? navigate('/owner') : setShowHouseReg(true)}>
+                        {isOwner ? 'Dashboard':'List Your House'}
+                    </button>)}
                 </div>
 
                 {/* Desktop Right */}
@@ -111,8 +116,8 @@ const Navbar = () => {
                         </a>
                     ))}
 
-                    {user && <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={()=>navigate('/owner')}>
-                        Dashboard
+                    {user && <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={()=>isOwner ? navigate('/owner') : setShowHouseReg(true)}>
+                        {isOwner ? 'Dashboard':'List Your House'}
                     </button>}
 
                     {!user && <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">

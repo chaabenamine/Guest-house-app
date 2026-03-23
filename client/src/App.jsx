@@ -13,14 +13,18 @@ import AddRoom from './pages/houseOwner/AddRoom';
 import ListRoom from './pages/houseOwner/ListRoom';
 import Dashboard from './pages/houseOwner/Dashboard';
 import Experience from './pages/Experience';
+import {Toaster} from "react-hot-toast"
+import { useAppContext } from './context/AppContext';
 
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes("owner");
+  const {showHouseReg}=useAppContext();
   return (
     <div>
+      <Toaster/>
       {!isOwnerPath && <Navbar />}
-      {false && <HouseReg/>}
+      {showHouseReg && <HouseReg/>}
       <div className='min-h-[70vh]'>
         <Routes>
           <Route path='/' element={<Home/>}/>
