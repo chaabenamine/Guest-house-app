@@ -4,7 +4,7 @@ import { assets, cities } from '../assets/assets'
 const Hero = () => {
   return (
     <div className='flex flex-col items-start justify-center
-     px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage2.jpg")] bg-no-repeat bg-cover bg-center
+     px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage2.png")] bg-no-repeat bg-cover bg-center
      h-screen'>
       <p className='bg-[#49B9FF]/50 px-3.5 pu-1 rounded-full mt-20'> L'Expérience Ultime en Maison d'Hôtes </p>
       
