@@ -4,73 +4,73 @@ import { useNavigate } from "react-router-dom";
 
 const themes = [
   {
-    title: "North-West Mountain Escape",
-    months: "January – February",
+    title: "Escapade en Montagne du Nord-Ouest",
+    months: "Janvier – Février",
     regions: [
       {
         name: "Kef",
         description:
-          "A mountain-inspired atmosphere featuring authentic rural traditions, local products, and cozy winter vibes.",
+          "Une atmosphère inspirée de la montagne, mettant en valeur des traditions rurales authentiques, des produits locaux et des ambiances hivernales chaleureuses.",
         image: "/kef.jpg",
       },
       {
         name: "Béja",
         description:
-          "Green landscapes, traditional Tunisian gastronomy, and a peaceful countryside experience.",
+          "Des paysages verdoyants, une gastronomie tunisienne traditionnelle et une expérience paisible à la campagne.",
         image: "/beja.jpg",
       },
     ],
   },
   {
-    title: "Saharan Desert Experience",
-    months: "March – April",
+    title: "Expérience du Désert Saharien",
+    months: "Mars – Avril",
     regions: [
       {
         name: "Tozeur",
         description:
-          "Desert-inspired decor, oasis themes, palm groves, and magical evenings under the stars.",
+          "Décor inspiré du désert, thèmes d'oasis, palmeraies et soirées magiques à la belle étoile.",
         image: "/Tozeur.jpg",
       },
       {
         name: "Kébili",
         description:
-          "An immersive southern experience with desert culture, warm colors, and traditional Saharan cuisine.",
+          "Une expérience immersive dans le sud avec la culture du désert, des couleurs chaudes et une cuisine saharienne traditionnelle.",
         image: "/Kebili.jpg",
       },
     ],
   },
   {
-    title: "Mediterranean Coastal Lifestyle",
-    months: "May – June",
+    title: "Art de Vivre Côtier Méditerranéen",
+    months: "Mai – Juin",
     regions: [
       {
         name: "Bizerte",
         description:
-          "Fresh sea vibes, coastal craftsmanship, and Mediterranean flavors.",
+          "Brise marine fraîche, artisanat côtier et saveurs méditerranéennes.",
         image: "/Bizerte.jpg",
       },
       {
         name: "Sousse",
         description:
-          "A vibrant coastal atmosphere blending heritage, beaches, and summer culture.",
+          "Une atmosphère côtière vibrante mêlant patrimoine, plages et culture estivale.",
         image: "/Sousse.jpg",
       },
     ],
   },
   {
-    title: "Spiritual & Heritage Center",
-    months: "July – August",
+    title: "Centre Spirituel et Patrimonial",
+    months: "Juillet – Août",
     regions: [
       {
         name: "Kairouan",
         description:
-          "A spiritual journey highlighting Islamic heritage, ancient architecture, and traditional craftsmanship.",
+          "Un voyage spirituel mettant en valeur le patrimoine islamique, l'architecture ancienne et l'artisanat traditionnel.",
         image: "/Kairouan.jpg",
       },
       {
         name: "Monastir",
         description:
-          "A historic coastal city combining spirituality, history, and Tunisian cultural identity.",
+          "Une ville côtière historique alliant spiritualité, histoire et identité culturelle tunisienne.",
         image: "/Monastir.jpg",
       },
     ],
@@ -86,20 +86,20 @@ const AboutUs = () => {
       {/* Page Title */}
       <Title
         title="Maison Caméléon"
-        subTitle="When AI Transforms Tunisian Traditions"
+        subTitle="Quand l'IA Transforme les Traditions Tunisiennes"
         align="left"
       />
 
       {/* Description */}
       <div className="mt-6 max-w-3xl text-gray-500 leading-relaxed text-base md:text-lg">
         <p>
-          Maison Caméléon is an intelligent guest house that transforms every
-          month to represent a different region of Tunisia.
+          La Maison Caméléon est une maison d'hôtes intelligente qui se transforme chaque
+          mois pour représenter une région différente de la Tunisie.
         </p>
         <p className="mt-4">
-          Through artificial intelligence and smart technologies, each visitor
-          enjoys a fully personalized and immersive cultural experience —
-          blending heritage preservation with technological innovation.
+          Grâce à l'intelligence artificielle et aux technologies intelligentes, chaque visiteur
+          profite d'une expérience culturelle totalement personnalisée et immersive —
+          alliant préservation du patrimoine et innovation technologique.
         </p>
       </div>
 
@@ -139,7 +139,7 @@ const AboutUs = () => {
                 <div className="md:w-1/2 flex flex-col gap-4 text-left">
 
                   <p className="text-xs uppercase tracking-widest text-gray-400">
-                    Featured Region
+                    Région En Vedette
                   </p>
 
                   <h3 className="text-3xl font-playfair text-gray-800">
@@ -157,7 +157,7 @@ const AboutUs = () => {
                     }}
                     className="mt-4 w-fit text-primary hover:underline text-sm font-medium transition"
                   >
-                    Explore This Experience →
+                    Explorer Cette Expérience →
                   </button>
 
                 </div>

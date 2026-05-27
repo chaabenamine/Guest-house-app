@@ -18,7 +18,7 @@ const HouseCard = ({ room, index }) => {
 
       {index % 2 === 0 && (
         <p className='px-3 py-1 absolute top-3 left-3 text-xs bg-white text-gray-800 font-medium rounded-full shadow'>
-          Best Seller
+          Meilleure Vente
         </p>
       )}
 
@@ -43,10 +43,10 @@ const HouseCard = ({ room, index }) => {
             <span className='text-xl text-gray-800'>
               {room.pricePerNight} TND
             </span>
-            /night
+            /nuit
           </p>
           <button className='px-4 py-2 text-sm font-medium border border-gray-300 rounded hover:bg-gray-50 transition cursor-pointer'>
-            Book Now
+            Réserver
           </button>
         </div>
       </div>

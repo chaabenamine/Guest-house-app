@@ -12,10 +12,10 @@ const BookIcon = () => (<svg className="w-4 h-4 text-gray-700" aria-hidden="true
 
 const Navbar = () => {
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Guest House', path: '/rooms' },
-        { name: 'Experience', path: '/experience' },
-        { name: 'About Us', path: '/about-us' },
+        { name: 'Accueil', path: '/' },
+        { name: 'Maisons d\'Hôtes', path: '/rooms' },
+        { name: 'Expérience', path: '/experience' },
+        { name: 'À Propos', path: '/about-us' },
     ];
 
 
@@ -67,7 +67,7 @@ const Navbar = () => {
 
                     { user && (
                         <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}onClick={()=>isOwner ? navigate('/owner') : setShowHouseReg(true)}>
-                        {isOwner ? 'Dashboard':'List Your House'}
+                        {isOwner ? 'Tableau de bord':'Enregistrer votre maison'}
                     </button>)}
                 </div>
 
@@ -78,12 +78,12 @@ const Navbar = () => {
                     {user ? 
                     (<UserButton>
                         <UserButton.MenuItems>
-                            <UserButton.Action label="My Bookings" labelIcon={<BookIcon/>} onClick={()=> navigate('/my-bookings')} />
+                            <UserButton.Action label="Mes Réservations" labelIcon={<BookIcon/>} onClick={()=> navigate('/my-bookings')} />
                         </UserButton.MenuItems>
                     </UserButton>)
                     :
                     (<button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
-                        Login
+                        Connexion
                     </button>)
                 
                 }
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-3 md:hidden">
                      {user && <UserButton>
                         <UserButton.MenuItems>
-                            <UserButton.Action label="My Bookings" labelIcon={<BookIcon/>} onClick={()=> navigate('/my-bookings')} />
+                            <UserButton.Action label="Mes Réservations" labelIcon={<BookIcon/>} onClick={()=> navigate('/my-bookings')} />
                         </UserButton.MenuItems>
                     </UserButton>}
                     <img onClick={()=> setIsMenuOpen(!isMenuOpen)} src={assets.menuIcon} alt="" className={`${isScrolled && 'invert'}h-4 `}/>
@@ -117,11 +117,11 @@ const Navbar = () => {
                     ))}
 
                     {user && <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={()=>isOwner ? navigate('/owner') : setShowHouseReg(true)}>
-                        {isOwner ? 'Dashboard':'List Your House'}
+                        {isOwner ? 'Tableau de bord':'Enregistrer votre maison'}
                     </button>}
 
                     {!user && <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
-                        Login
+                        Connexion
                     </button>}
                 </div>
             </nav>

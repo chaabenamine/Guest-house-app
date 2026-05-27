@@ -3,48 +3,48 @@ import Title from "../components/Title";
 
 const experiences = [
   {
-    title: "Interactive Digital Journey",
-    desc: "Explore Tunisia through smart interactive screens presenting history, landscapes, and traditions of different regions.",
+    title: "Parcours Numérique Interactif",
+    desc: "Explorez la Tunisie à travers des écrans interactifs intelligents présentant l'histoire, les paysages et les traditions de différentes régions.",
     icon: "🖥️",
   },
   {
-    title: "Virtual Reality Adventures",
-    desc: "Travel through Tunisia using VR: visit the Sahara desert, explore ancient medinas, and discover mountain villages.",
+    title: "Aventures en Réalité Virtuelle",
+    desc: "Voyagez à travers la Tunisie grâce à la RV : visitez le désert du Sahara, explorez d'anciennes médinas et découvrez des villages de montagne.",
     icon: "🥽",
   },
   {
-    title: "Cultural Chatbot Guide",
-    desc: "Chat with our AI assistant that shares stories, legends, and historical facts about Tunisian regions.",
+    title: "Guide Chatbot Culturel",
+    desc: "Discutez avec notre assistant IA qui partage des histoires, des légendes et des faits historiques sur les régions tunisiennes.",
     icon: "🤖",
   },
   {
-    title: "Traditional Craft Workshops",
-    desc: "Learn pottery, weaving, embroidery, and copper crafting with local Tunisian artisans.",
+    title: "Ateliers d'Artisanat Traditionnel",
+    desc: "Apprenez la poterie, le tissage, la broderie et le travail du cuivre avec des artisans tunisiens locaux.",
     icon: "🧵",
   },
   {
-    title: "Tunisian Stories & Legends Night",
-    desc: "Enjoy magical evenings where storytellers share traditional Tunisian tales and folklore.",
+    title: "Soirée Contes et Légendes Tunisiens",
+    desc: "Profitez de soirées magiques où des conteurs partagent des contes et du folklore traditionnels tunisiens.",
     icon: "🔥",
   },
   {
-    title: "Traditional Costume Demonstration",
-    desc: "Discover how traditional Tunisian clothing is made and learn the cultural meaning behind each design.",
+    title: "Démonstration de Costumes Traditionnels",
+    desc: "Découvrez comment sont confectionnés les vêtements traditionnels tunisiens et apprenez la signification culturelle de chaque modèle.",
     icon: "👗",
   },
   {
-    title: "Tunisian Cooking Classes",
-    desc: "Learn to cook famous Tunisian dishes like couscous, brik, and traditional desserts.",
+    title: "Cours de Cuisine Tunisienne",
+    desc: "Apprenez à cuisiner des plats tunisiens célèbres comme le couscous, le brik et les desserts traditionnels.",
     icon: "🍲",
   },
   {
-    title: "Live Tunisian Music Evenings",
-    desc: "Experience authentic Tunisian music performances with traditional instruments.",
+    title: "Soirées Musique Tunisienne Live",
+    desc: "Vivez d'authentiques représentations de musique tunisienne avec des instruments traditionnels.",
     icon: "🎶",
   },
   {
-    title: "Cultural Photo Spots",
-    desc: "Take beautiful photos in spaces inspired by Tunisia’s most iconic regions.",
+    title: "Spots Photos Culturels",
+    desc: "Prenez de superbes photos dans des espaces inspirés des régions les plus emblématiques de la Tunisie.",
     icon: "📸",
   },
 ];
@@ -54,8 +54,8 @@ const Experience = () => {
     <div className="py-28 px-6 md:px-16 lg:px-24 xl:px-32">
 
       <Title
-        title="Cultural Experiences"
-        subTitle="Discover authentic Tunisian culture through immersive activities at Maison Caméléon."
+        title="Expériences Culturelles"
+        subTitle="Découvrez la culture tunisienne authentique grâce à des activités immersives à la Maison Caméléon."
       />
 
       <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">

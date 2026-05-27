@@ -21,12 +21,12 @@ const RoomDetails = () => {
         {/*Room Details*/}
        <div className='flex flex-col md:flex-row items-start md:items-center gap-2'>
         <h1 className='text-3xl md:text-4xl font-playfair'>{room.house.name} <span className='font-inter text-sm'>({room.roomType})</span></h1>
-        <p className='text-xs font-inter py-1.5 px-3 text-white bg-orange-500 rounded-full'>20%OFF</p>
+        <p className='text-xs font-inter py-1.5 px-3 text-white bg-orange-500 rounded-full'>-20%</p>
        </div>
         {/*Room Raiting*/}
         <div className='flex items-center gap-1 mt-2'>
             <StarRating/>
-            <p className='ml-2'>200+ reviews</p>
+            <p className='ml-2'>200+ avis</p>
         </div>
         {/*Room Address*/}
         <div className='flex items-center gap-1 text-gray-500 mt-2'>
@@ -36,12 +36,12 @@ const RoomDetails = () => {
         {/*Room Images*/}
         <div className='flex flex-col lg:flex-row mt-6 gap-6'>
             <div className='lg:w-1/2 w-full'>
-                <img className='w-full rounded-xl shadow-lg object-cover' src={mainImage} alt="Room Image" />
+                <img className='w-full rounded-xl shadow-lg object-cover' src={mainImage} alt="Image de la chambre" />
             </div>
             <div className='grid grid-cols-2 gap-4 lg:w-1/2 w-full'>
                 {room?.images.length > 1 && room.images.map((image,index)=>(
                     <img onClick={()=>setMainImage(image)}
-                     key={index} src={image} alt="Room Image"
+                     key={index} src={image} alt="Image de la chambre"
                     className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage === image && 'outline-3 outline-orange-500'}`} />
                 ))}
             </div>
@@ -49,7 +49,7 @@ const RoomDetails = () => {
         {/*Room Highlights*/}
         <div className='flex flex-col md:flex-row md:justify-between mt-10'>
             <div className='flex flex-col'>
-                <h1 className='text-3xl md:text-xl font-playfair'>Experience Luxury Like Never Before</h1>
+                <h1 className='text-3xl md:text-xl font-playfair'>Vivez le luxe comme jamais auparavant</h1>
                 <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
                     {room.amenities.map((item,index)=>(
                         <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>
@@ -60,7 +60,7 @@ const RoomDetails = () => {
                 </div>
             </div>
             {/*Room Price*/}
-            <p className='text-2xl font-medium'>{room.pricePerNight} TND/night</p>
+            <p className='text-2xl font-medium'>{room.pricePerNight} TND/nuit</p>
 
         </div>
         {/* CheckIn CheckOut Form */}
@@ -68,24 +68,24 @@ const RoomDetails = () => {
            <div className='flex flex-col flex-wrap md:flex-row items-start md:items-center gap-4 md:gap-10 text-gray-500'>
                
                <div className='flex flex-col'>
-                <label className='font-medium' htmlFor="checkInDate">Check-In</label>
-                <input required className='w-full rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' placeholder='Check-In' type="date"  id="checkInDate" />
+                <label className='font-medium' htmlFor="checkInDate">Arrivée</label>
+                <input required className='w-full rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' placeholder='Arrivée' type="date"  id="checkInDate" />
                </div>
                <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
 
                <div className='flex flex-col'>
-                <label className='font-medium' htmlFor="checkOutDate">Check-Out</label>
-                <input required className='w-full rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' placeholder='Check-Out' type="date"  id="checkOutDate" />
+                <label className='font-medium' htmlFor="checkOutDate">Départ</label>
+                <input required className='w-full rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' placeholder='Départ' type="date"  id="checkOutDate" />
                </div>
                <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
 
                <div className='flex flex-col'>
-                <label className='font-medium' htmlFor="guests">Guests</label>
+                <label className='font-medium' htmlFor="guests">Voyageurs</label>
                 <input required className='max-w-20 rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none' placeholder='0' type="number"  id="guests" />
                </div>
 
            </div>
-           <button type='submit' className='bg-orange-500 hover:bg-orange-400 active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>Check Availability</button>
+           <button type='submit' className='bg-orange-500 hover:bg-orange-400 active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>Vérifier la Disponibilité</button>
         </form>
 
         {/*Common Specification */}
@@ -104,22 +104,22 @@ const RoomDetails = () => {
         </div>
 
         <div className='max-w-3xl border-y border-gray-300 my-15 py-10 text-gray-500'>
-            <p>Guests Will be allocated on the ground floor according to availabillty You get a comfortable two bedroom apartemnt has a true city feeling.The price quoted is for two guest,at the guest slot please mark the number of guests to get the exact price for groups.The guests will be allocated ground floor according to availability,You get the comfortable two bedroom apartment that has a true city feeling.</p>
+            <p>Les voyageurs seront affectés au rez-de-chaussée selon les disponibilités. Vous bénéficiez d'un appartement confortable de deux chambres qui offre une véritable ambiance citadine. Le prix indiqué est pour deux voyageurs, dans l'emplacement voyageurs veuillez indiquer le nombre de voyageurs pour obtenir le prix exact pour les groupes. Les voyageurs seront affectés au rez-de-chaussée selon les disponibilités, vous bénéficiez de l'appartement confortable de deux chambres qui a une véritable ambiance citadine.</p>
         </div>
         {/*Hosted by */}
 
         <div className='flex flex-col items-start gap-4'>
             <div className='flex gap-4'>
-                <img src={room.house.owner.image} alt="Host" className='h-14 w-14 md:h-18 md:w-18 rounded-full' />
+                <img src={room.house.owner.image} alt="Hôte" className='h-14 w-14 md:h-18 md:w-18 rounded-full' />
                 <div>
-                    <p className='text-lg md:text-xl'>Hosted by {room.house.name}</p>
+                    <p className='text-lg md:text-xl'>Hébergé par {room.house.name}</p>
                     <div className='flex items-center mt-1'>
                         <StarRating/>
-                        <p className='ml-2'>200+ reviews</p>
+                        <p className='ml-2'>200+ avis</p>
                     </div>
                 </div>
             </div>
-<button className='px-6 py-2.5 mt-4 rounded text-white bg-orange-500 hover:bg-orange-400 transition-all cursor-pointer'>Contact Now</button>
+<button className='px-6 py-2.5 mt-4 rounded text-white bg-orange-500 hover:bg-orange-400 transition-all cursor-pointer'>Contacter Maintenant</button>
         </div>
 
 

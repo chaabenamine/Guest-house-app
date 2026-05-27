@@ -8,12 +8,12 @@ const MyBooking = () => {
   return (
     <div className='py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32'>
        
-        <Title title='My Booking' subTitle='Easily manage your past, current,and upcoming hotel reservation in one place. Plan your trips seamlessly with just a few clicks' align='left'/>
+        <Title title='Mes Réservations' subTitle='Gérez facilement vos réservations d’hôtel passées, actuelles et à venir en un seul endroit. Planifiez vos voyages en toute fluidité en quelques clics.' align='left'/>
       <div className='max-w-6xl mt-8 w-full text-gray-800'>
         <div className='hidden md:grid md:grid-cols-[3fr_2fr_1fr] w-full border-b border-gray-300 font-medium text-base py-3' > 
-            <div className='w-1/3'>Hotels</div>
-            <div className='w-1/3'>Date & Timings</div>
-            <div className='w-1/3'>Payment</div>
+            <div className='w-1/3'>Hôtels</div>
+            <div className='w-1/3'>Date et Horaires</div>
+            <div className='w-1/3'>Paiement</div>
         </div>
         {bookings.map((booking)=>(
             <div key={booking._id} className='grid grid-cols-1 md:grid-cols-[3fr_2fr_1fr] w-full border-b border-gray-300 py-6 first:border-t'>
@@ -31,24 +31,24 @@ const MyBooking = () => {
                     </div>
                     <div className='flex items-center gap-1 text-sm text-gray-500'>
                 <img className='' src={assets.guestsIcon} alt="guests-icon" />
-                <span>Guests: {booking.guests}</span>
+                <span>Voyageurs : {booking.guests}</span>
 
                     </div>
-                    <p className='text-base'>Total:{booking.totalPrice} TND</p>
+                    <p className='text-base'>Total : {booking.totalPrice} TND</p>
                 </div>
             </div>
             {/*Date & timeings */}
             <div className='flex flex-row md:items-center md:gap-12 mt-3 gap-8'>
                 <div>
-                    <p>Check-In:</p>
+                    <p>Arrivée :</p>
                     <p className='text-gray-500 text-sm'>
-                        {new Date(booking.checkInDate).toDateString()}
+                        {new Date(booking.checkInDate).toLocaleDateString('fr-FR')}
                     </p>
                 </div>
                 <div>
-                    <p>Check-Out:</p>
+                    <p>Départ :</p>
                     <p className='text-gray-500 text-sm'>
-                        {new Date(booking.checkOutDate).toDateString()}
+                        {new Date(booking.checkOutDate).toLocaleDateString('fr-FR')}
                     </p>
                 </div>
 
@@ -58,12 +58,12 @@ const MyBooking = () => {
                 <div className='flex items-center gap-2'>
                     <div className={`h-3 w-3 rounded-full ${booking.isPaid ? "bg-green-500" : "bg-red-500"}`}></div>
                     <p className={`text-sm ${booking.isPaid ? "text-green-500" : "text-red-500"}`}>
-                        {booking.isPaid ? "Paid" : "Unpaid"}
+                        {booking.isPaid ? "Payé" : "Non payé"}
                     </p>
 
                 </div>
                 {!booking.isPaid && (
-                    <button className='px-4 py-1.5 mt-4 text-xs border border-gray-400 rounded-full hover;bg-gray-50 transition-all cursor-pointer'>Pay Now</button>
+                    <button className='px-4 py-1.5 mt-4 text-xs border border-gray-400 rounded-full hover;bg-gray-50 transition-all cursor-pointer'>Payer Maintenant</button>
                 )}
             </div>
             </div>

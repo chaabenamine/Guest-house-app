@@ -42,28 +42,28 @@ const HouseReg = () => {
         <img className='w-1/2 rounded-xl hidden md:block' src={assets.regImage} alt="reg-image" />
        <div className='relative flex flex-col items-center md:w-1/2 p-8 md:p-10'>
         <img src={assets.closeIcon} alt="close-icon" className='absolute top-4 right-4 h-4 w-4 cursor-pointer' onClick={()=>setShowHouseReg(false)}/>
-       <p className='text-2xl font-semibold mt-6'>Register Your House</p>
+       <p className='text-2xl font-semibold mt-6'>Enregistrer Votre Maison</p>
         {/*Hotel Name */}
        <div className='w-full mt-4'>
         <label htmlFor="name" className='font-medium text-gray-500'>
-            House Name
+            Nom de la Maison
         </label>
-        <input id='name' onChange={(e)=>setName(e.target.value)} value={name} type="text" placeholder='Type here' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
+        <input id='name' onChange={(e)=>setName(e.target.value)} value={name} type="text" placeholder='Tapez ici' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
        </div>
        {/*Phone */} 
        <div className='w-full mt-4'>
         <label htmlFor="contact" className='font-medium text-gray-500'>
-            Phone
+            Téléphone
         </label>
-        <input id='contact' onChange={(e)=>setContact(e.target.value)} value={contact} type="text" placeholder='Type here' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
+        <input id='contact' onChange={(e)=>setContact(e.target.value)} value={contact} type="text" placeholder='Tapez ici' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
 
        </div>
        {/*Address */} 
        <div className='w-full mt-4'>
         <label htmlFor="address" className='font-medium text-gray-500'>
-            Address
+            Adresse
         </label>
-        <input id='address' onChange={(e)=>setAddress(e.target.value)} value={address} type="text" placeholder='Type here' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
+        <input id='address' onChange={(e)=>setAddress(e.target.value)} value={address} type="text" placeholder='Tapez ici' className='border border-gray-200 rounded w-full px-3 py-3 py-2.5 my-1 outline-indigo-500 font-light' required/>
 
        </div>
 
@@ -71,14 +71,14 @@ const HouseReg = () => {
        <div className='w-full mt-4 max-w-60 mr-auto'>
         <label htmlFor="city" className='font-medium text-gray-500'></label>
         <select onChange={(e)=>setCity(e.target.value)} value={city} id="city" className='border border-gray-200 rounded w-full px-3 py-2.5 mt-1 outline-indigo-500 font-light' required>
-            <option value="">Select City</option>
+            <option value="">Sélectionnez une Ville</option>
             {cities.map((city)=>(
                 <option key={city} value={city}>{city}</option>
             ))}
         </select>
        </div>
 <button className="bg-[#a67c52] hover:bg-[#8b5e3c] transition-all text-white mr-auto px-6 py-2 rounded cursor-pointer mt-6">
-  Register
+  Enregistrer
 </button>       
 
 
