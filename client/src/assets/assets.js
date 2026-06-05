@@ -31,6 +31,9 @@ import regImage from './regImage.jpg'
 import bath2 from './bath2.png'
 import lib2 from './lib2.png'
 import di2 from './di2.png'
+import bath4 from './bath4.png'
+import lib4 from './lib4.png'
+import di4 from './di4.png'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.jpg";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.jpg";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.jpg";
@@ -206,7 +209,7 @@ export const houseDummyData = [
   {
     _id: "67f76393197ac559e4089b72",
     name: "Évasion Montagnarde du Nord-Ouest",
-    address: "Rue Habib Bourguiba, Le Kef, Tunisia",
+    address: "Le Kef",
     contact: "+216 55 123 456",
     owner: userDummyData,
     city: "Kef",
@@ -217,7 +220,7 @@ export const houseDummyData = [
   {
     _id: "67f76393197ac559e4089b73",
     name: "Expérience du Désert Saharien",
-    address: "Avenue Hédi Chaker, Tozeur, Tunisia",
+    address: "Tozeur",
     contact: "+216 55 123 456",
     owner: userDummyData,
     city: "Tozeur",
@@ -228,7 +231,7 @@ export const houseDummyData = [
   {
     _id: "67f76393197ac559e4089b74",
     name: "Centre Spirituel et Patrimonial",
-    address: "Rue Ibn El Jazzar, Kairouan, Tunisia",
+    address: "Kairouan",
     contact: "+216 55 654 321",
     owner: userDummyData,
     city: "Kairouan",
@@ -239,10 +242,10 @@ export const houseDummyData = [
   {
     _id: "67f76393197ac559e4089b75",
     name: "Mode de Vie Côtier Méditerranéen",
-    address: "Boulevard du 14 Janvier, Sousse, Tunisia",
+    address: "Monastir",
     contact: "+216 55 987 654",
     owner: userDummyData,
-    city: "Sousse",
+    city: "Monastir",
     createdAt: "2025-04-10T06:28:11.663Z",
     updatedAt: "2025-04-10T06:28:11.663Z",
     __v: 0
@@ -254,7 +257,7 @@ export const roomsDummyData = [
   {
     _id: "r1",
     house: houseDummyData[0], // Nord-Ouest Montagnard
-    roomType: "Chambre Double Deluxe",
+    roomType: "",
     pricePerNight: 420,
     amenities: ["WiFi Gratuit", "Vue sur la Montagne", "Climatisation", "Petit-Déjeuner Inclus"],
     images: [roomImg1, roomImg2, roomImg3, roomImg4],
@@ -263,8 +266,8 @@ export const roomsDummyData = [
   {
     _id: "r2",
     house: houseDummyData[1], // Sud Saharien
-    roomType: "Chambre Double Standard",
-    pricePerNight: 300,
+    roomType: "",
+    pricePerNight: 1200,
     amenities: ["WiFi Gratuit",  "Service d'Étage","Climatisation", "Petit-Déjeuner Inclus"],
     images: [roomImg2, bath2, lib2, di2],
     isAvailable: true
@@ -272,7 +275,7 @@ export const roomsDummyData = [
   {
     _id: "r3",
     house: houseDummyData[2], // Oasis Retreat
-    roomType: "Chambre Simple",
+    roomType: "",
     pricePerNight: 220,
     amenities: ["WiFi Gratuit", "Bureau", "Climatisation"],
     images: [roomImg3, roomImg4, roomImg1, roomImg2],
@@ -281,10 +284,10 @@ export const roomsDummyData = [
   {
     _id: "r4",
     house: houseDummyData[3], // Sahara Sunset Villa
-    roomType: "Suite Familiale",
-    pricePerNight: 650,
+    roomType: "",
+    pricePerNight: 800,
     amenities: ["WiFi Gratuit", "Vue sur la Mer", "2 Chambres", "Cuisine", "Balcon"],
-    images: [roomImg4, roomImg1, roomImg2, roomImg3],
+    images: [roomImg4, bath4, di4, lib4],
     isAvailable: true
   }
 ]
