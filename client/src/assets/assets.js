@@ -28,6 +28,9 @@ import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.jpg'
+import bath2 from './bath2.png'
+import lib2 from './lib2.png'
+import di2 from './di2.png'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.jpg";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.jpg";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.jpg";
@@ -263,7 +266,7 @@ export const roomsDummyData = [
     roomType: "Chambre Double Standard",
     pricePerNight: 300,
     amenities: ["WiFi Gratuit",  "Service d'Étage","Climatisation", "Petit-Déjeuner Inclus"],
-    images: [roomImg2, roomImg3, roomImg4, roomImg1],
+    images: [roomImg2, bath2, lib2, di2],
     isAvailable: true
   },
   {
