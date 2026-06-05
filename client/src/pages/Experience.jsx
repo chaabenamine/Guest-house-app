@@ -33,10 +33,10 @@ const experiences = [
     icon: "👗",
   },
   {
-    title: "Cours de Cuisine Tunisienne",
-    desc: "Apprenez à cuisiner des plats tunisiens célèbres comme le couscous, le brik et les desserts traditionnels.",
-    icon: "🍲",
-  },
+  title: "Excursion et Circuit Touristique",
+  desc: "Découvrez les plus beaux sites de Tunisie à travers des excursions guidées, des visites culturelles et des expériences authentiques.",
+  icon: "🚌",
+},
   {
     title: "Soirées Musique Tunisienne Live",
     desc: "Vivez d'authentiques représentations de musique tunisienne avec des instruments traditionnels.",
