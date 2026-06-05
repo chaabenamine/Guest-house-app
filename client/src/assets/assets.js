@@ -101,26 +101,26 @@ export const cities = [
 export const exclusiveOffers = [
     { 
         _id: 1, 
-        title: "Cozy Kef Stay", 
-        description: "Relax in a comfortable room at Maison Caméléon Kef with a complimentary local breakfast", 
+        title: "Séjour Confortable au Kef", 
+        description: "Détendez-vous dans une chambre confortable à la Maison Caméléon Kef avec un petit-déjeuner local offert", 
         priceOff: 20, 
-        expiryDate: "Aug 31", 
+        expiryDate: "31 Août", 
         image: exclusiveOfferCardImg1 
     },
     { 
         _id: 2, 
-        title: "Romantic Terrace Experience", 
-        description: "Special couples package with terrace sunset views and a welcome drink at the guesthouse", 
+        title: "Expérience Romantique en Terrasse", 
+        description: "Forfait spécial couples avec vue sur le coucher de soleil depuis la terrasse et boisson de bienvenue à la maison d'hôtes", 
         priceOff: 15, 
-        expiryDate: "Sep 20", 
+        expiryDate: "20 Sep", 
         image: exclusiveOfferCardImg2 
     },
     { 
         _id: 3, 
-        title: "Early Bird Maison Caméléon", 
-        description: "Book 30 days in advance and enjoy a discount on your stay in our cozy guesthouse rooms", 
+        title: "Réservation Anticipée Maison Caméléon", 
+        description: "Réservez 30 jours à l'avance et profitez d'une réduction sur votre séjour dans nos chambres d'hôtes confortables", 
         priceOff: 25, 
-        expiryDate: "Sep 25", 
+        expiryDate: "25 Sep", 
         image: exclusiveOfferCardImg3 
     }
 ];
@@ -129,32 +129,58 @@ export const exclusiveOffers = [
 
 // Testimonials Dummy Data
 export const testimonials = [
-    { id: 1, name: "Emma Rodriguez", address: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." },
-    { id: 2, name: "Liam Johnson", address: "NYC, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the houses were absolutely top-notch. Highly recommended!" },
-    { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
+    {
+        id: 1,
+        name: "Cristiano Ronaldo",
+        address: "Portugal, Lisbonne",
+        image: "./ronaldo.webp",
+        rating: 5,
+        review: "Une expérience exceptionnelle ! La réservation a été simple et rapide, et la maison d’hôtes a dépassé toutes mes attentes en matière de confort et d’accueil."
+    },
+    {
+        id: 2,
+        name: "lionel messi",
+        address: "Argentine, Buenos Aires",
+        image: "./messi.webp",
+        rating: 4,
+        review: "Un séjour très agréable dans un cadre chaleureux et authentique. Le personnel était attentionné et toujours disponible pour répondre à nos besoins."
+    },
+    {
+        id: 3,
+        name: "ichrak brinsi",
+        address: "Tunisie, Tunisie",
+        image: "./ichrak.jpg",
+        rating: 5,
+        review: "J’ai adoré mon séjour ! Les chambres étaient impeccables, l’ambiance conviviale et les services proposés ont rendu l’expérience vraiment mémorable."
+    }
 ];
 
 // Facility Icon
 export const facilityIcons = {
-    "Free WiFi": assets.freeWifiIcon,
-    "Breakfast Included": assets.freeBreakfastIcon,
-    "Room Service": assets.roomServiceIcon,
-    "Mountain View": assets.mountainIcon,
-    "Pool Access": assets.poolIcon,
-    "Air Conditioning": assets.airIcon,
-    "Sea View":assets.seaIcon,
-    "desk":assets.desk,
-    "kitchen":assets.kitchen,
-    "2 Bedrooms":assets.Bedrooms2,
-    "Balcony":assets.Balcony,
+    "WiFi Gratuit": assets.freeWifiIcon,
+    "Petit-Déjeuner Inclus": assets.freeBreakfastIcon,
+    "Service d'Étage": assets.roomServiceIcon,
+    "Vue sur la Montagne": assets.mountainIcon,
+    "Accès Piscine": assets.poolIcon,
+    "Climatisation": assets.airIcon,
+    "Vue sur la Mer":assets.seaIcon,
+    "Bureau":assets.desk,
+    "Cuisine":assets.kitchen,
+    "2 Chambres":assets.Bedrooms2,
+    "Balcon":assets.Balcony,
 };
 
 // For Room Details Page
 export const roomCommonData = [
-    { icon: assets.homeIcon, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
-    { icon: assets.badgeIcon, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
-    { icon: assets.locationFilledIcon, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
-    { icon: assets.heartIcon, title: "Smooth Check-In", description: "100% of guests gave check-in a 5-star rating." },
+
+    { icon: assets.homeIcon, title: "Séjour propre et sécurisé", description: "Un espace bien entretenu et hygiénique rien que pour vous." },
+
+    { icon: assets.badgeIcon, title: "Nettoyage renforcé", description: "Cet hôte suit les normes de nettoyage strictes de Staybnb." },
+
+    { icon: assets.locationFilledIcon, title: "Excellent emplacement", description: "90% des voyageurs ont attribué 5 étoiles à l’emplacement." },
+
+    { icon: assets.heartIcon, title: "Arrivée facile", description: "100% des voyageurs ont attribué 5 étoiles à l’enregistrement." },
+
 ];
 
 // User Dummy Data
@@ -176,7 +202,7 @@ export const userDummyData = {
 export const houseDummyData = [
   {
     _id: "67f76393197ac559e4089b72",
-    name: "North-West Mountain Escape",
+    name: "Évasion Montagnarde du Nord-Ouest",
     address: "Rue Habib Bourguiba, Le Kef, Tunisia",
     contact: "+216 55 123 456",
     owner: userDummyData,
@@ -187,7 +213,7 @@ export const houseDummyData = [
   },
   {
     _id: "67f76393197ac559e4089b73",
-    name: "Saharan Desert Experience",
+    name: "Expérience du Désert Saharien",
     address: "Avenue Hédi Chaker, Tozeur, Tunisia",
     contact: "+216 55 123 456",
     owner: userDummyData,
@@ -198,7 +224,7 @@ export const houseDummyData = [
   },
   {
     _id: "67f76393197ac559e4089b74",
-    name: "Spiritual & Heritage Center",
+    name: "Centre Spirituel et Patrimonial",
     address: "Rue Ibn El Jazzar, Kairouan, Tunisia",
     contact: "+216 55 654 321",
     owner: userDummyData,
@@ -209,7 +235,7 @@ export const houseDummyData = [
   },
   {
     _id: "67f76393197ac559e4089b75",
-    name: "Mediterranean Coastal Lifestyle",
+    name: "Mode de Vie Côtier Méditerranéen",
     address: "Boulevard du 14 Janvier, Sousse, Tunisia",
     contact: "+216 55 987 654",
     owner: userDummyData,
@@ -225,36 +251,36 @@ export const roomsDummyData = [
   {
     _id: "r1",
     house: houseDummyData[0], // Nord-Ouest Montagnard
-    roomType: "Deluxe Double Room",
+    roomType: "Chambre Double Deluxe",
     pricePerNight: 420,
-    amenities: ["Free WiFi", "Mountain View", "Air Conditioning", "Breakfast Included"],
+    amenities: ["WiFi Gratuit", "Vue sur la Montagne", "Climatisation", "Petit-Déjeuner Inclus"],
     images: [roomImg1, roomImg2, roomImg3, roomImg4],
     isAvailable: true
   },
   {
     _id: "r2",
     house: houseDummyData[1], // Sud Saharien
-    roomType: "Standard Double Room",
+    roomType: "Chambre Double Standard",
     pricePerNight: 300,
-    amenities: ["Free WiFi",  "Room Service","Air Conditioning", "Breakfast Included"],
+    amenities: ["WiFi Gratuit",  "Service d'Étage","Climatisation", "Petit-Déjeuner Inclus"],
     images: [roomImg2, roomImg3, roomImg4, roomImg1],
     isAvailable: true
   },
   {
     _id: "r3",
     house: houseDummyData[2], // Oasis Retreat
-    roomType: "Single Room",
+    roomType: "Chambre Simple",
     pricePerNight: 220,
-    amenities: ["Free WiFi", "desk", "Air Conditioning"],
+    amenities: ["WiFi Gratuit", "Bureau", "Climatisation"],
     images: [roomImg3, roomImg4, roomImg1, roomImg2],
     isAvailable: false
   },
   {
     _id: "r4",
     house: houseDummyData[3], // Sahara Sunset Villa
-    roomType: "Family Suite",
+    roomType: "Suite Familiale",
     pricePerNight: 650,
-    amenities: ["Free WiFi", "Sea View", "2 Bedrooms", "kitchen", "Balcony"],
+    amenities: ["WiFi Gratuit", "Vue sur la Mer", "2 Chambres", "Cuisine", "Balcon"],
     images: [roomImg4, roomImg1, roomImg2, roomImg3],
     isAvailable: true
   }
@@ -290,7 +316,7 @@ export const userBookingsDummyData = [
         "totalPrice": 399,
         "guests": 1,
         "status": "pending",
-        "paymentMethod": "Pay At house",
+        "paymentMethod": "Paiement sur place",
         "isPaid": false,
         "createdAt": "2025-04-10T06:41:45.873Z",
         "updatedAt": "2025-04-10T06:41:45.873Z",
@@ -306,7 +332,7 @@ export const userBookingsDummyData = [
         "totalPrice": 199,
         "guests": 1,
         "status": "pending",
-        "paymentMethod": "Pay At house",
+        "paymentMethod": "Paiement sur place",
         "isPaid": false,
         "createdAt": "2025-04-10T06:41:20.501Z",
         "updatedAt": "2025-04-10T06:41:20.501Z",
