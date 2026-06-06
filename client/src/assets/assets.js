@@ -40,9 +40,9 @@ import di3 from './di3.png'
 import bath1 from './bath1.png'
 import lib1 from './lib1.png'
 import di1 from './di1.png'
-import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.jpg";
-import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.jpg";
-import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.jpg";
+import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
+import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
+import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
 import addIcon from "./addIcon.svg";
 import dashboardIcon from "./dashboardIcon.svg";
 import listIcon from "./listIcon.svg";
@@ -112,29 +112,29 @@ export const cities = [
 
 export const exclusiveOffers = [
     { 
-        _id: 1, 
-        title: "Séjour Confortable au Kef", 
-        description: "Détendez-vous dans une chambre confortable à la Maison Caméléon Kef avec un petit-déjeuner local offert", 
-        priceOff: 20, 
-        expiryDate: "31 Août", 
-        image: exclusiveOfferCardImg1 
-    },
+    _id: 1, 
+    title: "La Bibliothèque IA", 
+    description: "Découvrez un espace de recherche innovant où les ressources traditionnelles rencontrent l'intelligence artificielle pour enrichir vos moments d'étude, de réflexion et de détente.", 
+    priceOff: 20, 
+    expiryDate: "31 Août", 
+    image: exclusiveOfferCardImg1 
+},
     { 
-        _id: 2, 
-        title: "Expérience Romantique en Terrasse", 
-        description: "Forfait spécial couples avec vue sur le coucher de soleil depuis la terrasse et boisson de bienvenue à la maison d'hôtes", 
-        priceOff: 15, 
-        expiryDate: "20 Sep", 
-        image: exclusiveOfferCardImg2 
-    },
+    _id: 2, 
+    title: "Le Restaurant Immersif", 
+    description: "Découvrez une expérience gastronomique unique où les saveurs du terroir s'unissent à des projections immersives, créant un voyage sensoriel inoubliable.", 
+    priceOff: 15, 
+    expiryDate: "20 Sep", 
+    image: exclusiveOfferCardImg2 
+},
     { 
-        _id: 3, 
-        title: "Réservation Anticipée Maison Caméléon", 
-        description: "Réservez 30 jours à l'avance et profitez d'une réduction sur votre séjour dans nos chambres d'hôtes confortables", 
-        priceOff: 25, 
-        expiryDate: "25 Sep", 
-        image: exclusiveOfferCardImg3 
-    }
+    _id: 3, 
+    title: "L'Atelier IA", 
+    description: "Explorez les possibilités infinies de l'intelligence artificielle dans un espace innovant doté d'équipements de pointe, de la réalité virtuelle aux écrans interactifs, pour une expérience technologique unique.", 
+    priceOff: 25, 
+    expiryDate: "25 Sep", 
+    image: exclusiveOfferCardImg3 
+},
 ];
     
 
@@ -264,7 +264,7 @@ export const roomsDummyData = [
     _id: "r1",
     house: houseDummyData[0], // Nord-Ouest Montagnard
     roomType: "",
-    pricePerNight: 420,
+    pricePerNight: 700,
     amenities: ["WiFi Gratuit", "Vue sur la Montagne", "Climatisation", "Petit-Déjeuner Inclus"],
     images: [roomImg1, bath1, di1, lib1],
     isAvailable: true
@@ -282,7 +282,7 @@ export const roomsDummyData = [
     _id: "r3",
     house: houseDummyData[2], // Oasis Retreat
     roomType: "",
-    pricePerNight: 220,
+    pricePerNight: 900,
     amenities: ["WiFi Gratuit", "Bureau", "Climatisation"],
     images: [roomImg3, bath3, di3, lib3],
     isAvailable: false
