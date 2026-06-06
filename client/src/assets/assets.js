@@ -23,7 +23,7 @@ import badgeIcon from './badgeIcon.svg'
 import menuIcon from './menuIcon.svg'
 import closeMenu from './closeMenu.svg'
 import guestsIcon from './guestsIcon.svg'
-import roomImg1 from './roomImg1.jpg'
+import roomImg1 from './roomImg1.png'
 import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
@@ -34,6 +34,12 @@ import di2 from './di2.png'
 import bath4 from './bath4.png'
 import lib4 from './lib4.png'
 import di4 from './di4.png'
+import bath3 from './bath3.png'
+import lib3 from './lib3.png'
+import di3 from './di3.png'
+import bath1 from './bath1.png'
+import lib1 from './lib1.png'
+import di1 from './di1.png'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.jpg";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.jpg";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.jpg";
@@ -260,7 +266,7 @@ export const roomsDummyData = [
     roomType: "",
     pricePerNight: 420,
     amenities: ["WiFi Gratuit", "Vue sur la Montagne", "Climatisation", "Petit-Déjeuner Inclus"],
-    images: [roomImg1, roomImg2, roomImg3, roomImg4],
+    images: [roomImg1, bath1, di1, lib1],
     isAvailable: true
   },
   {
@@ -278,7 +284,7 @@ export const roomsDummyData = [
     roomType: "",
     pricePerNight: 220,
     amenities: ["WiFi Gratuit", "Bureau", "Climatisation"],
-    images: [roomImg3, roomImg4, roomImg1, roomImg2],
+    images: [roomImg3, bath3, di3, lib3],
     isAvailable: false
   },
   {
